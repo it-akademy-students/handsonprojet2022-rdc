@@ -11,8 +11,8 @@ let correctAnswer = "", correctScore = 0, askedCount = 0, totalQuestion = 10;
 
 // prendre les différentes questions générées par l'API
 async function loadQuestion(){
-    // const APIURL = 'https://opentdb.com/api.php?amount=1';
-    const APIURL = 'data.json';
+    const APIURL = 'https://opentdb.com/api.php?amount=1';
+    // const APIURL = 'data.json';
     const result = await fetch(`${APIURL}`)
      // envoyer les infos reçus par l'APIURL dans une variable donnée
     const data = await result.json();
