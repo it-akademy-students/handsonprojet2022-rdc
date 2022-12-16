@@ -18,7 +18,7 @@
 
     <form action="actionCreateUser.php" method="post">
 
-    <div class="col-2 offset-5 mt-5">
+        <div class="col-2 offset-5 mt-5">
             <?php 
             if(isset($_SESSION['keep_name'])) 
             { 
@@ -30,7 +30,7 @@
             else 
             {
             ?>
-                <input type="text" class="form-control border-dark text-center" placeholder="Libelle produit" name="name">
+                <input type="text" class="form-control border-dark text-center" placeholder="Prénom" name="name">
             <?php
             }
             
@@ -54,136 +54,102 @@
 
         <div class="col-2 offset-5 mt-3">
             <?php 
-            if(isset($_SESSION['keep_buying_price'])) 
+            if(isset($_SESSION['keep_lastname'])) 
             { 
             ?>
-                <input type="text" class="form-control border-dark text-center" value="<?php echo $_SESSION['keep_buying_price'] ?>" name="buying_price">
+                <input type="text" class="form-control border-dark text-center" value="<?php echo $_SESSION['keep_lastname'] ?>" name="lastname">
             <?php 
-                unset($_SESSION['keep_buying_price']);
+                unset($_SESSION['keep_lastname']);
             } 
             else 
             {
             ?>
-                <input type="text" class="form-control border-dark text-center" placeholder="Prix unitaire achat" name="buying_price">
+                <input type="text" class="form-control border-dark text-center" placeholder="Nom" name="lastname">
             <?php
             }
             
-                if(isset($_SESSION['buying_price']))
+                if(isset($_SESSION['lastname']))
                 {
             ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['buying_price'] ?></div>
+                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['lastname'] ?></div>
             <?php
-                    unset($_SESSION['buying_price']);
+                    unset($_SESSION['lastname']);
                 }
 
-                if(isset($_SESSION['no_buying_price']))
+                if(isset($_SESSION['no_lastname']))
                 {
             ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['no_buying_price'] ?></div>
+                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['no_lastname'] ?></div>
             <?php
-                    unset($_SESSION['no_buying_price']);
+                    unset($_SESSION['no_lastname']);
                 }
             ?>
         </div>
 
         <div class="col-2 offset-5 mt-3">
             <?php 
-            if(isset($_SESSION['keep_selling_price'])) 
+            if(isset($_SESSION['email'])) 
             { 
             ?>
-                <input type="text" class="form-control border-dark text-center" value="<?php echo $_SESSION['keep_selling_price'] ?>" name="selling_price">
+                <input type="text" class="form-control border-dark text-center" value="<?php echo $_SESSION['email'] ?>" name="email">
             <?php 
-                unset($_SESSION['keep_selling_price']);
+                unset($_SESSION['email']);
             } 
             else 
             {
             ?>
-                <input type="text" class="form-control border-dark text-center" placeholder="Prix unitaire vente" name="selling_price">
+                <input type="text" class="form-control border-dark text-center" placeholder="Email" name="email">
             <?php
             }
             
-                if(isset($_SESSION['selling_price']))
+                if(isset($_SESSION['email']))
                 {
             ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['selling_price'] ?></div>
+                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['email'] ?></div>
             <?php
-                    unset($_SESSION['selling_price']);
+                    unset($_SESSION['email']);
                 }
 
-                if(isset($_SESSION['no_selling_price']))
+                if(isset($_SESSION['no_email']))
                 {
             ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['no_selling_price'] ?></div>
+                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['no_email'] ?></div>
             <?php
-                    unset($_SESSION['no_selling_price']);
+                    unset($_SESSION['no_email']);
                 }
             ?>
         </div>
 
         <div class="col-2 offset-5 mt-3">
             <?php 
-            if(isset($_SESSION['keep_supplier'])) 
+            if(isset($_SESSION['password'])) 
             { 
             ?>
-                <input type="text" class="form-control border-dark text-center" value="<?php echo $_SESSION['keep_supplier'] ?>" name="supplier">
+                <input type="text" class="form-control border-dark text-center" value="<?php echo $_SESSION['password'] ?>" name="password">
             <?php 
-                unset($_SESSION['keep_supplier']);
+                unset($_SESSION['password']);
             } 
             else 
             {
             ?>
-                <input type="text" class="form-control border-dark text-center" placeholder="Fournisseur" name="supplier">
+                <input type="text" class="form-control border-dark text-center" placeholder="Mot de passe" name="password">
             <?php
             }
             
-                if(isset($_SESSION['supplier']))
+                if(isset($_SESSION['password']))
                 {
             ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['supplier'] ?></div>
+                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['password'] ?></div>
             <?php
-                    unset($_SESSION['supplier']);
+                    unset($_SESSION['password']);
                 }
 
-                if(isset($_SESSION['no_supplier']))
+                if(isset($_SESSION['no_password']))
                 {
             ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['no_supplier'] ?></div>
+                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['no_password'] ?></div>
             <?php
-                    unset($_SESSION['no_supplier']);
-                }
-            ?>
-        </div>
-
-        <div class="col-2 offset-5 mt-3">
-            <?php 
-            if(isset($_SESSION['keep_quantity_stock'])) 
-            { 
-            ?>
-                <input type="text" class="form-control border-dark text-center" value="<?php echo $_SESSION['keep_quantity_stock'] ?>" name="quantity_stock">
-            <?php 
-                unset($_SESSION['keep_quantity_stock']);
-            } 
-            else 
-            {
-            ?>
-                <input type="text" class="form-control border-dark text-center" placeholder="Nombre de produit" name="quantity_stock">
-            <?php
-            }
-            
-                if(isset($_SESSION['quantity_stock']))
-                {
-            ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['quantity_stock'] ?></div>
-            <?php
-                    unset($_SESSION['quantity_stock']);
-                }
-
-                if(isset($_SESSION['no_quantity_stock']))
-                {
-            ?>
-                    <div class="alert alert-danger" role="alert"><?php echo $_SESSION['no_quantity_stock'] ?></div>
-            <?php
-                    unset($_SESSION['no_quantity_stock']);
+                    unset($_SESSION['no_password']);
                 }
             ?>
         </div>
