@@ -14,8 +14,10 @@ async function loadQuestion(){
     // const APIURL = 'https://opentdb.com/api.php?amount=1';
     const APIURL = 'data.json';
     const result = await fetch(`${APIURL}`)
+     // envoyer les infos reçus par l'APIURL dans une variable donnée
     const data = await result.json();
     _result.innerHTML = "";
+    //  afficher le resultat et les questions tout en les stockant dans un tableau
     showQuestion(data.results[0]);
 }
 
